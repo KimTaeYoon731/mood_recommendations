@@ -1,0 +1,18 @@
+# 환경 변수 파일
+.env
+
+# Python 캐시 파일들
+__pycache__/
+*.pyc
+
+# 가상환경 폴더 (만약 사용중이라면)
+venv/
+env/
+
+# IDE 설정 파일들
+.vscode/
+.idea/
+
+# 시스템 파일들
+.DS_Store
+Thumbs.db

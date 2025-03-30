@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7ff 0%, #fff0f9 100%);
+    font-family: 'Gaegu', cursive;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #6a4c93;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.mood-input {
+    margin: 30px 0;
+}
+
+input[type="text"] {
+    padding: 15px 20px;
+    width: 300px;
+    border: 3px solid #ffb5e8;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-family: 'Gaegu', cursive;
+    margin-right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #6a4c93;
+    box-shadow: 0 0 10px rgba(106, 76, 147, 0.3);
+}
+
+button {
+    padding: 15px 30px;
+    background: #ffb5e8;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-family: 'Gaegu', cursive;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background: #6a4c93;
+    transform: translateY(-2px);
+}
+
+.recommendations {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+    line-height: 1.6;
+    white-space: pre-line;
+    display: none;
+}
+
+.recommendations.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+#resetBtn {
+    margin-top: 20px;
+    background: #6a4c93;
+}
+
+#resetBtn:hover {
+    background: #ffb5e8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+        padding: 0 10px;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 0 15px 0;
+    }
+
+    button {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .recommendations {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+}
