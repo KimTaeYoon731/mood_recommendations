@@ -21,7 +21,7 @@ def get_recommendations(mood):
         print(f"API 키: {api_key[:5]}...")  # API 키 앞부분만 출력
         
         response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo-preview",
             messages=[
                 {"role": "system", "content": "당신은 감정에 따라 영화와 음악을 추천해주는 전문가입니다. 각 추천에 대한 이유도 함께 설명해주세요."},
                 {"role": "user", "content": f"지금 기분이 {mood}일 때 어울리는 영화 3개와 노래 3개를 추천해주세요. 각각의 추천 이유도 설명해주세요."}
